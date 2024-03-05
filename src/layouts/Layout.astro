@@ -1,11 +1,12 @@
 ---
+import Header from '../components/Header.astro';
 interface Props {
 	title: string;
 	description? : string;
 	image?: string;
 }
 
-const { title, description = 'GG MishMish', image = "./images/band.jpg" } = Astro.props;
+const { title, description = 'MishMish', image = "./images/band.jpg" } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ const { title, description = 'GG MishMish', image = "./images/band.jpg" } = Astr
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen">
+		<Header />
 		<slot />
 	</body>
 </html>
@@ -32,12 +34,12 @@ const { title, description = 'GG MishMish', image = "./images/band.jpg" } = Astr
 			45deg,
 			rgb(var(--accent)),
 			rgb(var(--accent-light)) 30%,
-			white 60%
+			rgb(255, 255, 255) 60%
 		);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #1ea588;
 		background-size: 224px;
 	}
 	code {
